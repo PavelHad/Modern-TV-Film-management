@@ -20,8 +20,9 @@ K výsledku práce prosím přiložte SQL soubor, kde bude definovaná struktura
     - [ ] Volitelné stránkování.
 - [x] Docker: Vytvořte Dockerfile a docker-compose.yml pro jednoduchou správu vývojového prostředí.
 - Statická analýza kódu: Využijte nástroje pro statickou analýzu kódu (např. PHPStan, CodeSniffer) k identifikaci potenciálních chyb a nedostatků ve vašem kódu.
-    - [ ] Phpstan
-    - [ ] CodeSniffer
+    - [x] Phpstan
+    - [x] CodeSniffer
+    - [x] PHPUnit
 - [ ] Testování: Přidejte Unit testy, pokud je to možné a zvažte integrační testy pro práci s API.
 
 ### Návrh API konfigurace:
