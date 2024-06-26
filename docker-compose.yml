@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - ./www:/var/www/html
+      - "./conf/docker-php-ext-sodium.ini:/usr/local/etc/php/conf.d/docker-php-ext-sodium.ini"    
+    networks:
+      - hadnet
+
+  mysql:
+    image: mariadb:10.5.8
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_PASSWORD=password
+      - MYSQL_USER=user
+      - MYSQL_DATABASE=nette
+    networks:
+      - hadnet
+
+  adminer:
+    image: adminer
+    ports:
+        - 8080:8080
+    networks:
+      - hadnet
+
+networks:
+  hadnet:
+    name: had-network
