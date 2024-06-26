@@ -18,7 +18,7 @@ K výsledku práce prosím přiložte SQL soubor, kde bude definovaná struktura
 - [ ] Endpoint pro získání všech filmů.
     - [ ] Volitelná filtrace.
     - [ ] Volitelné stránkování.
-- [ ] Docker: Vytvořte Dockerfile a docker-compose.yml pro jednoduchou správu vývojového prostředí.
+- [x] Docker: Vytvořte Dockerfile a docker-compose.yml pro jednoduchou správu vývojového prostředí.
 - Statická analýza kódu: Využijte nástroje pro statickou analýzu kódu (např. PHPStan, CodeSniffer) k identifikaci potenciálních chyb a nedostatků ve vašem kódu.
     - [ ] Phpstan
     - [ ] CodeSniffer
@@ -34,3 +34,12 @@ K výsledku práce prosím přiložte SQL soubor, kde bude definovaná struktura
 - [ ] [POST] /api/v1/movies - Vytvoření nového filmu.
 - [ ] [PUT] /api/v1/movies/{id} - Editace existujícího filmu.
 - [ ] [DELETE] /api/v1/movies/{id} - Smazání filmu.
+
+# Zpracování
+
+Docker - `docker compose up` 
+
+Web - [localhost:8081](http://localhost:8081/)
+(Nette aplikace je umístěna v adresáři www)
+
+Adminer - [localhost:8080](http://localhost:8080/)
