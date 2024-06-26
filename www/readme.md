@@ -4,3 +4,4 @@
 
 ### Makefile:
 - `make clean` - Smazání cache, dump composer
+- `make phpstan` - PHPstan analýza
