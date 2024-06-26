@@ -5,3 +5,6 @@ clean:
 
 phpstan:
 	php vendor/bin/phpstan analyse app --level 7
+
+phpunit:
+	php ./vendor/bin/phpunit
