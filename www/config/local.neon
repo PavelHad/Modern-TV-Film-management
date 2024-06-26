@@ -1,0 +1,8 @@
+parameters:
+
+    database:
+        host: mysql
+        user: 'user'
+        password: 'password'
+        dbname: 'nette'
+        port: 3306

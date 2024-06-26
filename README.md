@@ -37,7 +37,9 @@ K výsledku práce prosím přiložte SQL soubor, kde bude definovaná struktura
 
 # Zpracování
 
-Docker - `docker compose up` 
+Docker - `docker compose up`
+
+Docker image: `docker exec -it modern-tv-film-management-web-1 bash`
 
 Web - [localhost:8081](http://localhost:8081/)
 (Nette aplikace je umístěna v adresáři www)
