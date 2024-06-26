@@ -8,3 +8,9 @@ phpstan:
 
 phpunit:
 	php ./vendor/bin/phpunit
+
+cs:
+	php vendor/bin/phpcs --standard=phpcs.xml app tests
+
+cs-fix:
+	php vendor/bin/phpcbf --standard=phpcs.xml app tests
