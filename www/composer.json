@@ -27,7 +27,8 @@
 		"nettrine/cache": "^0.3.0",
 		"nettrine/migrations": "^0.9.1",
 		"nettrine/fixtures": "^0.7.2",
-		"ramsey/uuid": "^4.7"
+		"ramsey/uuid": "^4.7",
+		"happyr/doctrine-specification": "^2.0"
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",
