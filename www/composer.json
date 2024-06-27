@@ -26,7 +26,8 @@
 		"nettrine/annotations": "^0.7.0",
 		"nettrine/cache": "^0.3.0",
 		"nettrine/migrations": "^0.9.1",
-		"nettrine/fixtures": "^0.7.2"
+		"nettrine/fixtures": "^0.7.2",
+		"ramsey/uuid": "^4.7"
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",

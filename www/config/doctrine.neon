@@ -40,3 +40,4 @@ nettrine.dbal:
 		charset: utf8mb4
 
 		types:
+			app.movie.movieId: App\Infrastructure\Persistence\Doctrine\Type\MovieIdType
