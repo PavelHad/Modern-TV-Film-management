@@ -2,13 +2,14 @@
 
 namespace App\Infrastructure\Domain\Movie;
 
+use App\Domain\Movie\Exception\MovieNotFoundException;
 use App\Domain\Movie\Movie;
 use App\Domain\Movie\MovieId;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Domain\Movie\MoviesDetailCollection;
 use Doctrine\ORM\EntityManagerInterface;
 use Happyr\DoctrineSpecification\Repository\EntitySpecificationRepository;
 use Happyr\DoctrineSpecification\Specification\Specification;
+use function array_map;
 
 /**
  * @extends EntitySpecificationRepository<Movie>
@@ -21,9 +22,12 @@ class MovieRepository extends EntitySpecificationRepository
 		parent::__construct($em, $em->getClassMetadata(Movie::class));
 	}
 
+	/**
+	 * @throws MovieNotFoundException
+	 */
 	public function get(MovieId $id): Movie
 	{
-		return $this->find($id);
+		return $this->find($id) ?? throw new MovieNotFoundException($id);
 	}
 
 	public function add(Movie $movie): void
@@ -36,14 +40,19 @@ class MovieRepository extends EntitySpecificationRepository
 		$this->getEntityManager()->remove($movie);
 	}
 
-	/**
-	 * @return Collection<Movie>
-	 */
-	public function query(Specification $specification): Collection
+	public function query(Specification $specification): MoviesDetailCollection
 	{
 		$query = $this->getQuery($specification);
 
-		return new ArrayCollection($query->getResult());
+		$result = $query->getResult();
+
+		return new MoviesDetailCollection(
+			$result->count(),
+			...array_map(
+				static fn (Movie $movie) => $movie->getDetail(),
+				$result->toArray(),
+			),
+		);
 	}
 
 }
