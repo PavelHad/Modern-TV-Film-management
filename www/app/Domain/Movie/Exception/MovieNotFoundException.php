@@ -9,7 +9,7 @@ use Throwable;
 class MovieNotFoundException extends NotFoundException
 {
 
-	public function __construct(MovieId $movieId, Throwable|null $previous = null)
+	public function __construct(MovieId $movieId, ?Throwable $previous = null)
 	{
 		parent::__construct("Movie with id={$movieId->getValue()} not found.", $previous);
 	}

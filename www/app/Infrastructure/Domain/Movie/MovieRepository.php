@@ -10,6 +10,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Happyr\DoctrineSpecification\Repository\EntitySpecificationRepository;
 use Happyr\DoctrineSpecification\Specification\Specification;
 use function array_map;
+use function count;
 
 /**
  * @extends EntitySpecificationRepository<Movie>
@@ -47,10 +48,10 @@ class MovieRepository extends EntitySpecificationRepository
 		$result = $query->getResult();
 
 		return new MoviesDetailCollection(
-			$result->count(),
+			count($result),
 			...array_map(
 				static fn (Movie $movie) => $movie->getDetail(),
-				$result->toArray(),
+				$result,
 			),
 		);
 	}
