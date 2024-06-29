@@ -4,6 +4,8 @@
     <!-- Import base -->
     <rule ref="./vendor/orisai/coding-standard/src/ruleset-8.2.xml"/>
 
+    <arg value="n"/>
+
     <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
         <properties>
             <property name="withSpaces" value="no"/>
