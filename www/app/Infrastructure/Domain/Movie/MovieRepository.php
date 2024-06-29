@@ -6,6 +6,7 @@ use App\Domain\Movie\Exception\MovieNotFoundException;
 use App\Domain\Movie\Movie;
 use App\Domain\Movie\MovieId;
 use App\Domain\Movie\MoviesDetailCollection;
+use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityManagerInterface;
 use Happyr\DoctrineSpecification\Repository\EntitySpecificationRepository;
 use Happyr\DoctrineSpecification\Specification\Specification;
@@ -54,6 +55,15 @@ class MovieRepository extends EntitySpecificationRepository
 				$result,
 			),
 		);
+	}
+
+	public function totalCount(Specification $specification): int
+	{
+		$query = $this->getQuery($specification);
+
+		$result = $query->getResult(AbstractQuery::HYDRATE_ARRAY);
+
+		return (int) count($result);
 	}
 
 }

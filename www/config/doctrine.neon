@@ -15,6 +15,13 @@ extensions:
 
     nettrine.migrations: Nettrine\Migrations\DI\MigrationsExtension
 
+    # Fixtures
+    nettrine.fixtures: Nettrine\Fixtures\DI\FixturesExtension
+
+nettrine.fixtures:
+  paths:
+    - %rootDir%/fixtures
+
 nettrine.orm.xml:
 	mapping: [
 		App: %appDir%/Infrastructure/Persistence/Doctrine/Mapping
