@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Application\Movie\Response;
+namespace Tests\Unit\Application\Movie\Response;
 
 use App\Application\Movie\Response\MovieResponseFactory;
 use App\Application\Movie\Response\MoviesResponseCollectionFactory;
