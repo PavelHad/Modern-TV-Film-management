@@ -1,12 +1,13 @@
 services:
 	- App\Router\RouterFactory::createRouter
+	- GuzzleHttp\Client
 
 search:
 	-	in: %appDir%
 		classes:
 			- *Factory
-			- *Facade
 			- *UseCase
 			- *Repository
-			- *Provider
 			- *Controller
+			- *Handler
+			- *Client
