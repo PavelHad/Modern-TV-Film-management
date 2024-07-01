@@ -4,10 +4,10 @@ clean:
 	composer du
 
 phpstan:
-	php vendor/bin/phpstan analyse app --level 7
+	php vendor/bin/phpstan analyse -c phpstan.neon --no-progress
 
 phpstan-baseline:
-	php vendor/bin/phpstan analyse app --level 7 --generate-baseline phpstan-baseline.neon
+	php vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline phpstan-baseline.neon
 
 phpunit:
 	php ./vendor/bin/phpunit

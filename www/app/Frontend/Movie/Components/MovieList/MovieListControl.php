@@ -17,7 +17,7 @@ class MovieListControl extends Control
 
 	private PaginatorControl $paginatorControl;
 
-	private ?int $page;
+	private int $page = 1;
 
 	public function __construct(
 		private readonly SdkClient $sdkClient,

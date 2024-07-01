@@ -31,7 +31,7 @@ class ListMoviesRequest extends Request
 
 		$query = http_build_query($queryParams);
 
-		$uri = 'http://localhost/api/v1/movies?' . $query;
+		$uri = 'movies?' . $query;
 
 		parent::__construct('GET', $uri);
 	}
