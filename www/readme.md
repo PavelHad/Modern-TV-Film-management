@@ -13,3 +13,4 @@
 - `php bin/console` - contributte/console
 - `php bin/console migrations:diff` - Vytvoření migrací
 - `php bin/console migrations:migrate` - Provedení migrací
+- `php bin/console doctrine:fixtures:load` - Naplnění dat
