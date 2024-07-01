@@ -1,0 +1,51 @@
+{varType App\Sdk\Resources\Movies\Response\ListMoviesResponse $movies}
+
+<div class="float-end">
+    {include createMovieButton.latte}
+</div>
+<table class="table">
+    <thead>
+        <form method="get">
+            <tr>
+                <th scope="col">
+                    {_movie.name}
+                    <input type="text" name="name" class="form-control"/>
+                </th>
+                <th scope="col">
+                    {_movie.description}
+                    <input type="text" name="description" class="form-control"/>
+                </th>
+                <th scope="col">
+                    {_movie.genre}
+                    <input type="text" name="genre" class="form-control"/>
+                </th>
+                <th scope="col">
+                    {_movie.director}
+                    <input type="text" name="director" class="form-control"/>
+                </th>
+                <th scope="col">
+                    {_movie.action}
+                    <input type="submit" name="submit" value="{_global.filter}" class="btn btn-primary"/>
+                </th>
+            </tr>
+        </form>
+    </thead>
+    <tbody>
+        {foreach $movies->getItems() as $movie}
+        <tr>
+            <th scope="row">{$movie->getName()}</th>
+            <td>{$movie->getDescription()}</td>
+            <td>{$movie->getGenre()}</td>
+            <td>{$movie->getDirector()}</td>
+            <td>
+                <div class="d-flex gap-2">
+                {include editMovieButton.latte, movie => $movie}
+                {include deleteModal.latte, movie => $movie}
+                </div>
+            </td>
+        </tr>
+    {/foreach}
+    </tbody>
+</table>
+
+{control paginatorControl}

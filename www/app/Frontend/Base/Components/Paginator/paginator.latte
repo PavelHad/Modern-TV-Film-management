@@ -1,0 +1,7 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {for $i = 0; $i < $totalPagesCount; $i++}
+            <li class="page-item"><a class="page-link {if ($i+1) == $actualPage}active{/if}" href="?page={$i+1}">{$i+1}</a></li>
+        {/for}
+    </ul>
+</nav>

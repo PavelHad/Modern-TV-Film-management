@@ -30,7 +30,9 @@
 		"ramsey/uuid": "^4.7",
 		"happyr/doctrine-specification": "^2.0",
 		"psr/http-client": "^1.0",
-		"guzzlehttp/guzzle": "^7.8"
+		"guzzlehttp/guzzle": "^7.8",
+		"contributte/translation": "^2.0",
+		"contributte/forms-bootstrap": "^0.8.1"
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",
