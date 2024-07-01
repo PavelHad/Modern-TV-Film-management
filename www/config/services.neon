@@ -11,3 +11,4 @@ search:
 			- *Controller
 			- *Handler
 			- *Client
+			- *Provider

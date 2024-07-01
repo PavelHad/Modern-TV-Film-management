@@ -31,6 +31,7 @@ class Bootstrap
 		$configurator->addConfig($appDir . '/config/local.neon');
 		$configurator->addConfig($appDir . '/config/apitte.neon');
 		$configurator->addConfig($appDir . '/config/doctrine.neon');
+		$configurator->addConfig($appDir . '/config/translation.neon');
 
 		return $configurator;
 	}

@@ -1,0 +1,17 @@
+movie: Film
+movies: Filmy
+movie_list: Seznam filmů
+
+name: Název
+description: Popis
+genre: Žánr
+director: Režisér
+action: Akce
+
+add_movie: Přidat film
+edit_movie: Upravit film
+
+delete_movie: Smazat film
+movie_successfully_deleted: Film byl úspěšně smazán
+movie_successfully_created: Film byl úspěšně vytvořen
+really_want_to_delete_movie: Opravdu chcete smazat film

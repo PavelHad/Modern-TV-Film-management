@@ -1,0 +1,12 @@
+extensions:
+	translation: Contributte\Translation\DI\TranslationExtension
+
+translation:
+	locales:
+		whitelist: [cs]
+		default: cs
+		fallback: [cs]
+	dirs:
+		- %appDir%/Languages/cs
+
+	returnOriginalMessage: true # to not translate undefined messages, default is true
