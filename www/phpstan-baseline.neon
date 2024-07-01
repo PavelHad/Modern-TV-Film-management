@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Nette\\\\Localization\\\\Translator\\:\\:setLocale\\(\\)\\.$#"
+			count: 1
+			path: app/Frontend/Base/Presenters/BasePresenter.php

@@ -15,7 +15,7 @@ class CreateMovieRequest extends Request
 		?string $genre,
 	)
 	{
-		$uri = 'http://localhost/api/v1/movies';
+		$uri = 'movies';
 
 		$body = Json::encode([
 			'name' => $name,

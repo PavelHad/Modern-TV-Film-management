@@ -12,3 +12,4 @@ search:
 			- *Handler
 			- *Client
 			- *Provider
+			- *Service

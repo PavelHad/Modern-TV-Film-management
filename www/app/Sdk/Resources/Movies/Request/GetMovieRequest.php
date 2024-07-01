@@ -9,7 +9,7 @@ class GetMovieRequest extends Request
 
 	public function __construct(string $id)
 	{
-		$uri = 'http://localhost/api/v1/movies/' . $id;
+		$uri = 'movies/' . $id;
 
 		parent::__construct('GET', $uri);
 	}

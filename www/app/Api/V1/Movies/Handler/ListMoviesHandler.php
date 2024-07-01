@@ -4,17 +4,24 @@ namespace App\Api\V1\Movies\Handler;
 
 use Apitte\Core\Http\ApiRequest;
 use Apitte\Core\Http\ApiResponse;
+use App\Api\V1\Authorization\AuthorizationService;
 use App\Application\Movie\ListMoviesUseCase;
 
 class ListMoviesHandler
 {
 
-	public function __construct(private readonly ListMoviesUseCase $listMoviesUseCase)
+	public function __construct(
+		private readonly ListMoviesUseCase $listMoviesUseCase,
+		private readonly AuthorizationService $authorizationService,
+	)
 	{
 	}
 
 	public function handle(ApiRequest $request, ApiResponse $response): ApiResponse
 	{
+		$token = $request->getHeader('Authorization');
+		$this->authorizationService->authorize($token[0]);
+
 		$params = $request->getQueryParams();
 
 		$offset = isset($params['offset']) ? (int) $params['offset'] : null;

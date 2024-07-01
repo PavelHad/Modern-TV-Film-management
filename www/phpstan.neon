@@ -3,11 +3,12 @@ includes:
 	- phpstan-baseline.neon
 
 parameters:
-	scanDirectories:
+	paths:
 		- app
+		- tests
 
 	level: 8
 
 	ignoreErrors:
-		- '#^Cannot call method render\\(\\) on Nette\\\\Application\\\\UI\\\\Template\\|stdClass\\.$#'
-		- '#^Cannot call method add\\(\\) on Nette\\\\Application\\\\UI\\\\Template\\|stdClass\\.$#'
+		- "#^Cannot call method render\\(\\) on Nette\\\\Application\\\\UI\\\\Template\\|stdClass\\.$#"
+		- "#^Cannot call method add\\(\\) on Nette\\\\Application\\\\UI\\\\Template\\|stdClass\\.$#"

@@ -16,7 +16,7 @@ class UpdateMovieRequest extends Request
 		?string $genre,
 	)
 	{
-		$uri = 'http://localhost/api/v1/movies/' . $id;
+		$uri = 'movies/' . $id;
 
 		$body = Json::encode([
 			'name' => $name,

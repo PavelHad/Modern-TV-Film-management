@@ -25,7 +25,7 @@ class CountMoviesRequest extends Request
 
 		$query = http_build_query($queryParams);
 
-		$uri = 'http://localhost/api/v1/movies/count?' . $query;
+		$uri = 'movies/count?' . $query;
 
 		parent::__construct('GET', $uri);
 	}
