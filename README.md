@@ -49,10 +49,10 @@ Adminer - [localhost:8080](http://localhost:8080/)
 
 # Postup spuštění prostředí
 
-1. `docker compose up`
+1. `docker compose up` 2x
 2. `docker exec -it modern-tv-film-management-web-1 bash`
    ( pokud nefunguje `docker ps` a `docker exec -it <web_container_id> bash` )
-4. `composer install`
+4. `composer install` (nemám v prostředí zip extension, takže tohle nainstalovat normálně ze systému `cd www` a `composer install`)
 5. `php bin/console migrations:migrate`
 6. `php bin/console doctrine:fixtures:load`
 
