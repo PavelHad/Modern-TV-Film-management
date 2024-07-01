@@ -46,7 +46,6 @@ class MovieListControl extends Control
 					'success',
 				);
 				$this->presenter->redirect('this');
-				die;
 			},
 		);
 	}
@@ -65,7 +64,6 @@ class MovieListControl extends Control
 			'success',
 		);
 		$this->presenter->redirect('this');
-		die;
 	}
 
 	public function render(): void

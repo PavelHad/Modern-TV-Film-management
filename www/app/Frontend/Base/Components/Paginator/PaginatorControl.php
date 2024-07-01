@@ -8,10 +8,6 @@ use function ceil;
 class PaginatorControl extends Control
 {
 
-	private int $limit;
-
-	private int $offset;
-
 	public function __construct(
 		private readonly int $totalItems,
 		private readonly int $itemsPerPage,
